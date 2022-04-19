@@ -1,0 +1,7 @@
+{
+  "name": "monorepo-yarn-example",
+  "workspaces": [
+    "frontend"
+  ],
+  "packageManager": "yarn@3.2.0"
+}
