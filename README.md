@@ -1,12 +1,16 @@
 # monorepo-yarn-example
 
+yarn 3.2.0 monorepo containing a react webapp in /frontend and a express api on /backend both hosted separately on [tiramisu.cloud](https://www.tiramisu.cloud/)
+
+# Steps I did to create this monorepo
+
 Install yarn globally if you don't have it yet
 
 ```bash
 npm install -g yarn
 ```
 
-Update to lastest stable version available
+Update to lastest stable version available of yarn
 
 ```bash
 yarn set version stable
@@ -48,7 +52,7 @@ yarn
 
 Add backend to workspaces in package.json
 
-````javascript
+```javascript
 // package.json
   ...
   "workspaces": [
@@ -56,9 +60,26 @@ Add backend to workspaces in package.json
     "backend"
   ],
   ...
+```
 
 Create express backend api
 
 ```bash
-yarn run express-generator backend
-````
+yarn dlx express-generator backend
+```
+
+Fix express dependency on jade by adding this code to .yarnrc.yml
+
+```yml
+#.yarnrc.yml
+packageExtensions:
+  "express@*":
+    dependencies:
+      "jade": "*"
+```
+
+and then run yarn
+
+```bash
+yarn
+```
