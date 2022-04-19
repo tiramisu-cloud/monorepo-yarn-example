@@ -50,6 +50,18 @@ Run yarn to clean frontend/node_modules
 yarn
 ```
 
+Remove eslintConfig from package.json
+
+```json
+// remove this from package.json
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+```
+
 Add backend to workspaces in package.json
 
 ```javascript
