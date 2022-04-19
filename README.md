@@ -50,16 +50,19 @@ Run yarn to clean frontend/node_modules
 yarn
 ```
 
-Remove eslintConfig from package.json
+Disable eslint by adding DISABLE_ESLINT_PLUGIN=true in front of the scripts in package.json.
+Something needs to be done to have eslint work with yarn but don't have time now to figure it out so I'll just disable it.
 
 ```json
-// remove this from package.json
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+// package.json
+ ...
+  "scripts": {
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
+    "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject"
   },
+  ...
 ```
 
 Add backend to workspaces in package.json
