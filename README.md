@@ -99,6 +99,14 @@ and then run yarn
 yarn
 ```
 
+Change current working directory to /backend
+
+```bash
+cd backend
+```
+
+Install @vendia/serverless-express
+
 ```bash
 yarn add @vendia/serverless-express
 ```
@@ -121,4 +129,49 @@ module.exports = {
     app,
   }),
 };
+```
+
+install webpack
+
+```bash
+yarn add --dev webpack webpack-cli
+```
+
+add webpack.config.js in /backend
+
+```bash
+touch webpack.config.js
+open webpack.config.js
+```
+
+add the following to backend/webpack.config.js
+
+```js
+const path = require("path");
+
+module.exports = {
+  entry: {
+    handler: ["./handler.js"],
+  },
+  output: {
+    libraryTarget: "commonjs2",
+    path: path.join(__dirname, `build`),
+  },
+  target: "node",
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
+};
+```
+
+in backend/package.json add a build script calling webpack:
+
+```json
+  ...
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "webpack"
+  },
+  ...
 ```
