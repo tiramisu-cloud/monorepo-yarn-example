@@ -6,17 +6,17 @@ yarn 3.2.0 monorepo containing a react webapp in /frontend and a express api on 
 
 Install yarn globally if you don't have it yet
 
-```bash
+```shell
 npm install -g yarn
 ```
 
 Update to lastest stable version available of yarn
 
-```bash
+```shell
 yarn set version stable
 ```
 
-```bash
+```shell
 yarn init -y
 ```
 
@@ -40,13 +40,13 @@ Add frontend to workspaces in package.json
 
 Create React frontend webapp
 
-```bash
+```shell
 yarn create react-app frontend
 ```
 
 Run yarn to clean frontend/node_modules
 
-```bash
+```shell
 yarn
 ```
 
@@ -79,41 +79,51 @@ Add backend to workspaces in package.json
 
 Create express backend api
 
-```bash
+```shell
 yarn dlx express-generator backend
-```
-
-Fix express dependency on jade by adding this code to .yarnrc.yml
-
-```yml
-#.yarnrc.yml
-packageExtensions:
-  "express@*":
-    dependencies:
-      "jade": "*"
 ```
 
 and then run yarn
 
-```bash
+```shell
 yarn
 ```
 
 Change current working directory to /backend
 
-```bash
+```shell
 cd backend
+```
+
+Replace the content of backend/app with
+
+```js
+// backend/app.js
+var express = require("express");
+
+var app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/", (req, res, next) => {
+  res.json({
+    healthy: true,
+  });
+});
+
+module.exports = app;
 ```
 
 Install @vendia/serverless-express
 
-```bash
+```shell
 yarn add @vendia/serverless-express
 ```
 
 add file handler.js at the root of the project
 
-```bash
+```shell
 touch handler.js
 ```
 
@@ -133,13 +143,13 @@ module.exports = {
 
 install webpack
 
-```bash
+```shell
 yarn add --dev webpack webpack-cli
 ```
 
 add webpack.config.js in /backend
 
-```bash
+```shell
 touch webpack.config.js
 open webpack.config.js
 ```

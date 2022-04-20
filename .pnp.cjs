@@ -5746,12 +5746,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["backend", "workspace:backend"],\
             ["@vendia/serverless-express", "npm:4.5.2"],\
-            ["cookie-parser", "npm:1.4.6"],\
             ["debug", "virtual:3c4f7f349789d7597b53f6806dcbf71445596dd97a6a139314a632324e544d12b73623cfb0621bb9d37d8830b5ffbaf5935d9d709ca211a5a162bb877a1524e9#npm:2.6.9"],\
             ["express", "npm:4.16.4"],\
-            ["http-errors", "npm:1.6.3"],\
-            ["jade", "npm:1.11.0"],\
-            ["morgan", "npm:1.9.1"],\
             ["webpack", "virtual:93b36166c6e57acd847623d7ee49370f62c07d93945b963c9ec902d1cdae2bfe60ed6f719a108d6b0465851e99d579ad9ee7fd3f172e95528823af91aee7346c#npm:5.72.0"],\
             ["webpack-cli", "virtual:93b36166c6e57acd847623d7ee49370f62c07d93945b963c9ec902d1cdae2bfe60ed6f719a108d6b0465851e99d579ad9ee7fd3f172e95528823af91aee7346c#npm:4.9.2"]\
           ],\
@@ -5763,16 +5759,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",\
           "packageDependencies": [\
             ["balanced-match", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["basic-auth", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/basic-auth-npm-2.0.1-f1627ef330-3419b805d5.zip/node_modules/basic-auth/",\
-          "packageDependencies": [\
-            ["basic-auth", "npm:2.0.1"],\
-            ["safe-buffer", "npm:5.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6574,28 +6560,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:0.4.1", {\
-          "packageLocation": "./.yarn/cache/cookie-npm-0.4.1-cc5e2ebb42-bd7c47f5d9.zip/node_modules/cookie/",\
-          "packageDependencies": [\
-            ["cookie", "npm:0.4.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.4.2", {\
           "packageLocation": "./.yarn/cache/cookie-npm-0.4.2-7761894d5f-a00833c998.zip/node_modules/cookie/",\
           "packageDependencies": [\
             ["cookie", "npm:0.4.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["cookie-parser", [\
-        ["npm:1.4.6", {\
-          "packageLocation": "./.yarn/cache/cookie-parser-npm-1.4.6-a68f84d02a-1e5a63aa82.zip/node_modules/cookie-parser/",\
-          "packageDependencies": [\
-            ["cookie-parser", "npm:1.4.6"],\
-            ["cookie", "npm:0.4.1"],\
-            ["cookie-signature", "npm:1.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11602,20 +11570,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["monorepo-yarn-example", "workspace:."]\
           ],\
           "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["morgan", [\
-        ["npm:1.9.1", {\
-          "packageLocation": "./.yarn/cache/morgan-npm-1.9.1-cfe5c59dac-6958432868.zip/node_modules/morgan/",\
-          "packageDependencies": [\
-            ["morgan", "npm:1.9.1"],\
-            ["basic-auth", "npm:2.0.1"],\
-            ["debug", "virtual:3c4f7f349789d7597b53f6806dcbf71445596dd97a6a139314a632324e544d12b73623cfb0621bb9d37d8830b5ffbaf5935d9d709ca211a5a162bb877a1524e9#npm:2.6.9"],\
-            ["depd", "npm:1.1.2"],\
-            ["on-finished", "npm:2.3.0"],\
-            ["on-headers", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["ms", [\
