@@ -4518,6 +4518,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@vendia/serverless-express", [\
+        ["npm:4.5.2", {\
+          "packageLocation": "./.yarn/cache/@vendia-serverless-express-npm-4.5.2-f728e5d749-53f6abc1b1.zip/node_modules/@vendia/serverless-express/",\
+          "packageDependencies": [\
+            ["@vendia/serverless-express", "npm:4.5.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@webassemblyjs/ast", [\
         ["npm:1.11.1", {\
           "packageLocation": "./.yarn/cache/@webassemblyjs-ast-npm-1.11.1-623d3d973e-1eee1534ad.zip/node_modules/@webassemblyjs/ast/",\
@@ -5652,6 +5661,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./backend/",\
           "packageDependencies": [\
             ["backend", "workspace:backend"],\
+            ["@vendia/serverless-express", "npm:4.5.2"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["debug", "virtual:3c4f7f349789d7597b53f6806dcbf71445596dd97a6a139314a632324e544d12b73623cfb0621bb9d37d8830b5ffbaf5935d9d709ca211a5a162bb877a1524e9#npm:2.6.9"],\
             ["express", "npm:4.16.4"],\

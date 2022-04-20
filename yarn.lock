@@ -2799,6 +2799,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vendia/serverless-express@npm:4.5.2":
+  version: 4.5.2
+  resolution: "@vendia/serverless-express@npm:4.5.2"
+  checksum: 53f6abc1b17241ac9b02514c6dd18614f97c03156647e32d2196dc06468cede5d08807a67aa19800798481476cf3e05ecc95b416baea406c1ef58de822074c25
+  languageName: node
+  linkType: hard
+
 "@webassemblyjs/ast@npm:1.11.1":
   version: 1.11.1
   resolution: "@webassemblyjs/ast@npm:1.11.1"
@@ -3668,6 +3675,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:backend"
   dependencies:
+    "@vendia/serverless-express": 4.5.2
     cookie-parser: ~1.4.4
     debug: ~2.6.9
     express: ~4.16.1

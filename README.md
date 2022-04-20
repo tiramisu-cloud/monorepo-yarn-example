@@ -98,3 +98,27 @@ and then run yarn
 ```bash
 yarn
 ```
+
+```bash
+yarn add @vendia/serverless-express
+```
+
+add file handler.js at the root of the project
+
+```bash
+touch handler.js
+```
+
+with the following content
+
+```js
+// handler.js
+const serverlessExpress = require("@vendia/serverless-express");
+const app = require("./app.js");
+
+module.exports = {
+  default: serverlessExpress({
+    app,
+  }),
+};
+```
